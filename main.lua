@@ -93,8 +93,8 @@ local sequence_data = {
     {
         name = "walk",
         start = 1,
-        count = 10,
-        time = 800,
+        count = 8,
+        time = 1000,
         loopCount = 0,
         sheet = sheetWalkRobot
     }       
@@ -133,7 +133,7 @@ function leftArrow:touch( event )
         transition.moveBy( Robot, { 
             x = -150, 
             y = 0, 
-            time = 800 
+            time = 1000 
             } )
         Robot:setSequence( "walk" )
         Robot:play()
@@ -152,3 +152,4 @@ end
 
 rightArrow:addEventListener( "touch", rightArrow )
 leftArrow:addEventListener( "touch", leftArrow )
+Ninja:addEventListener("sprite", resetToIdle)
